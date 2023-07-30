@@ -15,6 +15,12 @@ namespace BookDiaryApplication.Data.BookDiaryApplicationDB
       Configuration = configuration;
     }
 
+    public virtual DbSet<Author> Authors { get; set; }
+    public virtual DbSet<Book> Books { get; set; }
+    public virtual DbSet<BookReview> BookReviews { get; set; }
+    public virtual DbSet<Genre> Genres { get; set; }
+    public virtual DbSet<User> Users { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"));
