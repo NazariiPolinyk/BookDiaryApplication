@@ -3,7 +3,7 @@ using BookDiaryApplication.Data.BookDiaryDB.Models;
 using BookDiaryApplication.Data.BookDiaryApplicationDB;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookReviewDiaryApplication.Infrastructure.Repository
+namespace BookDiaryApplication.Infrastructure.Repository
 {
   public class BookReviewRepository : IRepository<BookReview>
   {
