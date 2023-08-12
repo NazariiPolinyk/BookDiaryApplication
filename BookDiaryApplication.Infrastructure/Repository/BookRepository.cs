@@ -41,5 +41,10 @@ namespace BookDiaryApplication.Infrastructure.Repository
       _context?.Books.Remove(entity);
       await _context.SaveChangesAsync();
     }
+
+    public bool Exists(int id)
+    {
+      return _context.Books.Any(x => x.Id == id);
+    }
   }
 }
