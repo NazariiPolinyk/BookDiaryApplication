@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookDiaryApplication.Interf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookDiaryApplication.Core", "BookDiaryApplication.Core\BookDiaryApplication.Core.csproj", "{9EA29948-0585-4F76-B071-3ED3FE2BA6A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookDiaryApplication.Infrastructure", "BookDiaryApplication.Infrastructure\BookDiaryApplication.Infrastructure.csproj", "{1941A677-8FAF-41E8-BE6E-51DDB077740C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookDiaryApplication.Infrastructure", "BookDiaryApplication.Infrastructure\BookDiaryApplication.Infrastructure.csproj", "{1941A677-8FAF-41E8-BE6E-51DDB077740C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookDiaryApplication.Web", "BookDiaryApplication.Web\BookDiaryApplication.Web.csproj", "{75F1172E-BB8C-41BD-9B86-822D78B30FE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1941A677-8FAF-41E8-BE6E-51DDB077740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1941A677-8FAF-41E8-BE6E-51DDB077740C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1941A677-8FAF-41E8-BE6E-51DDB077740C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F1172E-BB8C-41BD-9B86-822D78B30FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F1172E-BB8C-41BD-9B86-822D78B30FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F1172E-BB8C-41BD-9B86-822D78B30FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F1172E-BB8C-41BD-9B86-822D78B30FE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

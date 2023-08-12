@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookDiaryApplication.Data\BookDiaryApplication.Data.csproj" />
+    <ProjectReference Include="..\BookDiaryApplication.Infrastructure\BookDiaryApplication.Infrastructure.csproj" />
+    <ProjectReference Include="..\BookDiaryApplication.Interfaces\BookDiaryApplication.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
