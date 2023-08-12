@@ -7,5 +7,6 @@
     Task InsertAsync(T entity);
     Task UpdateAsync(T entity);
     Task DeleteAsync(T entity);
+    bool Exists(int id);
   }
 }
