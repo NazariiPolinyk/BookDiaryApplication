@@ -20,6 +20,8 @@ namespace BookDiaryApplication.Data.BookDiaryApplicationDB
     public virtual DbSet<BookReview> BookReviews { get; set; }
     public virtual DbSet<Genre> Genres { get; set; }
     public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<PublishingHouse> PublishingHouses { get; set; }
+    public virtual DbSet<Store> Stores { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -48,17 +50,11 @@ namespace BookDiaryApplication.Data.BookDiaryApplicationDB
         entity.Property(e => e.ReleaseDate).IsRequired(false)
                                            .HasColumnType("date");
 
-        entity.HasOne(a => a.Author)
-              .WithMany(b => b.Books)
-              .HasForeignKey(a => a.AuthorRef)
-              .HasConstraintName("FK_Book_Author")
-              .OnDelete(DeleteBehavior.ClientSetNull);
+        entity.HasMany(a => a.Authors)
+              .WithMany(b => b.Books);
 
-        entity.HasOne(g => g.Genre)
-              .WithMany(b => b.Books)
-              .HasForeignKey(g => g.GenreRef)
-              .HasConstraintName("FK_Book_Genre")
-              .OnDelete(DeleteBehavior.ClientSetNull);
+        entity.HasMany(g => g.Genres)
+              .WithMany(b => b.Books);
       });
 
       modelBuilder.Entity<Genre>(entity =>
@@ -102,6 +98,32 @@ namespace BookDiaryApplication.Data.BookDiaryApplicationDB
         entity.Property(e => e.Email).IsRequired();
 
         entity.Property(e => e.Password).IsRequired();
+      });
+
+      modelBuilder.Entity<PublishingHouse>(entity =>
+      {
+        entity.ToTable("PublishingHouse");
+
+        entity.Property(e => e.Name).IsRequired();
+
+        entity.Property(e => e.Description).IsRequired();
+
+        entity.Property(e => e.Country).IsRequired();
+
+        entity.HasMany(e => e.Books)
+              .WithMany(e => e.PublishingHouses);
+
+        entity.HasMany(e => e.Stores)
+              .WithMany(e => e.PublishingHouses);
+      });
+
+      modelBuilder.Entity<Store>(entity =>
+      {
+        entity.ToTable("Store");
+
+        entity.Property(e => e.Name).IsRequired();
+
+        entity.Property(e => e.Description).IsRequired();
       });
     }
   }

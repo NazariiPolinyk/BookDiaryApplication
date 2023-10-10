@@ -11,9 +11,9 @@ namespace BookDiaryApplication.Data.BookDiaryDB.Models
     public int AuthorRef { get; set; }
     public int GenreRef { get; set; }
 
-    public Author Author { get; set; }
-    public Genre Genre { get; set; }
-
+    public ICollection<Author> Authors { get; set; }
+    public ICollection<Genre> Genres { get; set; }
     public ICollection<BookReview> BookReviews { get; set; }
+    public ICollection<PublishingHouse> PublishingHouses { get; set; }
   }
 }
