@@ -13,6 +13,8 @@ namespace BookDiaryApplication.Web.MappingProfiles
       CreateMap<BookReview, BookReviewDTO>().ReverseMap();
       CreateMap<Genre, GenreDTO>().ReverseMap();
       CreateMap<User, UserDTO>().ReverseMap();
+      CreateMap<Store, StoreDTO>().ReverseMap();
+      CreateMap<PublishingHouse, PublishingHouseDTO>().ReverseMap();
     }
   }
 }

@@ -1,6 +1,8 @@
-﻿namespace BookDiaryApplication.Data.BookDiaryDB.Models
+﻿using BookDiaryApplication.Interfaces;
+
+namespace BookDiaryApplication.Data.BookDiaryDB.Models
 {
-  public class PublishingHouse
+  public class PublishingHouse : IEntity
   {
     public int Id { get; set; }
     public string Name { get; set; }

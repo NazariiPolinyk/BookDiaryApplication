@@ -17,6 +17,8 @@ builder.Services.AddScoped(typeof(IRepository<Book>), typeof(BookRepository));
 builder.Services.AddScoped(typeof(IRepository<BookReview>), typeof(BookReviewRepository));
 builder.Services.AddScoped(typeof(IRepository<Genre>), typeof(GenreRepository));
 builder.Services.AddScoped(typeof(IRepository<User>), typeof(UserRepository));
+builder.Services.AddScoped(typeof(IRepository<Store>), typeof(StoreRepository));
+builder.Services.AddScoped(typeof(IRepository<PublishingHouse>), typeof(PublishingHouseRepository));
 builder.Services.AddAutoMapper(typeof(BookDiaryMappingProfile));
 
 var app = builder.Build();

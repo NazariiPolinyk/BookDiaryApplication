@@ -1,8 +1,8 @@
-﻿
+﻿using BookDiaryApplication.Interfaces;
 
 namespace BookDiaryApplication.Data.BookDiaryDB.Models
 {
-  public class Store
+  public class Store : IEntity
   {
     public int Id { get; set; }
     public string Name { get; set; }
